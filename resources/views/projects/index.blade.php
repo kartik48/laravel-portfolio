@@ -17,7 +17,7 @@
                 @foreach($projects as $project)
                     <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="{{ $project->image ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
+                            <img class="h-48 w-full object-cover" src="{{ $project->image_url ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
                         </div>
                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                             <div class="flex-1">
