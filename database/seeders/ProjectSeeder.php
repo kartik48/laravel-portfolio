@@ -19,7 +19,8 @@ class ProjectSeeder extends Seeder
             'description' => 'My personal portfolio website (this one!). Built with Laravel and Tailwind CSS. Showcases my projects and skills.',
             'image' => 'portfolio-project.png',
             'link' => '/',
-            'tags' => ['Laravel', 'Tailwind CSS', 'SQLite']
+            'tags' => ['Laravel', 'Tailwind CSS', 'SQLite'],
+            'category' => 'development'
         ]);
     }
 }
