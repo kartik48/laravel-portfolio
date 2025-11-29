@@ -61,6 +61,21 @@ Follow these steps to set up the project locally:
     ```
     Visit `http://localhost:8000` in your browser.
 
+## 🐳 Running with Docker
+
+You can also run the application using Docker, which handles all dependencies and setup automatically.
+
+1.  **Build the Image**
+    ```bash
+    docker build -t laravel-portfolio .
+    ```
+
+2.  **Run the Container**
+    ```bash
+    docker run -p 8080:80 laravel-portfolio
+    ```
+    Visit `http://localhost:8080` in your browser.
+
 ## 🧪 Running Tests
 
 To run the automated feature tests:

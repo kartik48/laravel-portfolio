@@ -36,7 +36,7 @@
                 @foreach($projects as $project)
                     <div x-show="activeTab === '{{ $project->category }}'" class="flex flex-col rounded-lg shadow-lg overflow-hidden">
                         <div class="flex-shrink-0">
-                            <img class="h-48 w-full object-cover" src="{{ $project->image_url ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
+                            <img class="h-48 w-full object-cover" src="{{ $project->thumbnail_url ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
                         </div>
                         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
                             <div class="flex-1">
@@ -94,7 +94,7 @@
                                 <img :src="activeProject?.image_url || 'https://via.placeholder.com/400x300'" alt="" class="w-full h-64 object-cover rounded-md mb-4">
                                 <p class="text-sm text-gray-500" x-text="activeProject?.description"></p>
                                 <div class="mt-4" x-show="activeProject?.link">
-                                    <a :href="activeProject?.link" target="_blank" class="text-indigo-600 hover:text-indigo-500 font-medium">Visit Project &rarr;</a>
+                                    <a :href="activeProject?.link" target="_blank" class="text-indigo-600 hover:text-indigo-500 font-medium">View Project &rarr;</a>
                                 </div>
                             </div>
                         </div>

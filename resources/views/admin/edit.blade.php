@@ -42,16 +42,24 @@
                 </div>
 
                 <div>
-                    <label for="image" class="block text-sm font-medium text-gray-700">Image URL</label>
+                    <label for="thumbnail" class="block text-sm font-medium text-gray-700">Thumbnail URL or Path</label>
                     <div class="mt-1">
-                        <input type="url" name="image" id="image" value="{{ $project->image }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        <input type="text" name="thumbnail" id="thumbnail" value="{{ $project->thumbnail }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="image" class="block text-sm font-medium text-gray-700">Detail Image URL or Path (Optional)</label>
+                    <div class="mt-1">
+                        <input type="text" name="image" id="image" value="{{ $project->image }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        <p class="mt-1 text-sm text-gray-500">If left blank, the thumbnail will be used.</p>
                     </div>
                 </div>
 
                 <div>
                     <label for="link" class="block text-sm font-medium text-gray-700">Project Link</label>
                     <div class="mt-1">
-                        <input type="url" name="link" id="link" value="{{ $project->link }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                        <input type="text" name="link" id="link" value="{{ $project->link }}" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
                     </div>
                 </div>
 

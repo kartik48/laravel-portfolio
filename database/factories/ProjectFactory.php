@@ -19,6 +19,7 @@ class ProjectFactory extends Factory
         return [
             'title' => fake()->sentence(3),
             'description' => fake()->paragraph(),
+            'thumbnail' => fake()->imageUrl(),
             'image' => fake()->imageUrl(),
             'link' => fake()->url(),
             'category' => fake()->randomElement(['development', 'data']),

@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Dependencies (we install these inside the container)
+/vendor
+/node_modules
+
+# Environment (we set these at runtime)
+.env
+
+# IDE
+.idea
+.vscode
+
+# OS
+.DS_Store
+
+# Tests
+/tests
+phpunit.xml
+
+# Storage (don't copy local logs or cache)
+/storage/*.key
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/logs/*

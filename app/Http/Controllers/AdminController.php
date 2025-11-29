@@ -46,13 +46,14 @@ class AdminController extends Controller
         $validated = $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'image' => 'nullable|url', // For now assuming URL, or we can handle file upload later if needed
-            'link' => 'nullable|url',
+            'thumbnail' => 'nullable|string',
+            'image' => 'nullable|string',
+            'link' => 'nullable|string',
             'category' => 'required|in:data,development',
             'tags' => 'nullable|string', // Comma separated
         ]);
 
-        if ($validated['tags']) {
+        if (isset($validated['tags']) && $validated['tags']) {
             $validated['tags'] = array_map('trim', explode(',', $validated['tags']));
         }
 
@@ -71,13 +72,14 @@ class AdminController extends Controller
         $validated = $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'image' => 'nullable|url',
-            'link' => 'nullable|url',
+            'thumbnail' => 'nullable|string',
+            'image' => 'nullable|string',
+            'link' => 'nullable|string',
             'category' => 'required|in:data,development',
             'tags' => 'nullable|string',
         ]);
 
-        if ($validated['tags']) {
+        if (isset($validated['tags']) && $validated['tags']) {
             $validated['tags'] = array_map('trim', explode(',', $validated['tags']));
         }
 

@@ -17,6 +17,7 @@ class ProjectSeeder extends Seeder
         Project::create([
             'title' => 'Portfolio Website',
             'description' => 'My personal portfolio website (this one!). Built with Laravel and Tailwind CSS. Showcases my projects and skills.',
+            'thumbnail' => 'portfolio-project.png',
             'image' => 'portfolio-project.png',
             'link' => '/',
             'tags' => ['Laravel', 'Tailwind CSS', 'SQLite'],

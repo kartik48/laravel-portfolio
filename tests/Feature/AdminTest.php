@@ -52,6 +52,7 @@ class AdminTest extends TestCase
             'description' => 'Project Description',
             'category' => 'development',
             'tags' => 'Laravel, Vue',
+            'thumbnail' => 'https://example.com/thumb.png',
         ]);
 
         $response->assertRedirect('/admin/dashboard');
