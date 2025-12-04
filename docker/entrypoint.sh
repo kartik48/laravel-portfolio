@@ -4,12 +4,23 @@
 set -e
 
 # 1. Database Setup
+# Determine database path from env or default
+DB_PATH=${DB_DATABASE:-/var/www/html/database/database.sqlite}
+DB_DIR=$(dirname "${DB_PATH}")
+
+# Create directory if it doesn't exist (e.g. if using a volume mounted at /var/www/html/storage)
+if [ ! -d "$DB_DIR" ]; then
+    echo "Creating database directory: $DB_DIR"
+    mkdir -p "$DB_DIR"
+    chown www-data:www-data "$DB_DIR"
+fi
+
 # Check if the SQLite database file exists. If not, create an empty one.
-if [ ! -f /var/www/html/database/database.sqlite ]; then
-    echo "Creating database.sqlite..."
-    touch /var/www/html/database/database.sqlite
+if [ ! -f "$DB_PATH" ]; then
+    echo "Creating database file: $DB_PATH"
+    touch "$DB_PATH"
     # Ensure the web server can write to it
-    chown www-data:www-data /var/www/html/database/database.sqlite
+    chown www-data:www-data "$DB_PATH"
 fi
 
 # 2. Environment Setup
