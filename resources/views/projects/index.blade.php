@@ -49,7 +49,7 @@
                                         @endforeach
                                     @endif
                                 </p>
-                                <a href="#" @click.prevent="activeProject = {{ $project }}" class="block mt-2">
+                                <a href="#" @click.prevent="activeProject = {{ json_encode($project) }}" class="block mt-2">
                                     <p class="text-xl font-semibold text-gray-900">
                                         {{ $project->title }}
                                     </p>
@@ -60,7 +60,7 @@
                             </div>
                             <div class="mt-6 flex items-center">
                                 <div class="flex-shrink-0">
-                                    <button @click="activeProject = {{ $project }}" class="text-base font-semibold text-indigo-600 hover:text-indigo-500">
+                                    <button @click="activeProject = {{ json_encode($project) }}" class="text-base font-semibold text-indigo-600 hover:text-indigo-500">
                                         View Details &rarr;
                                     </button>
                                 </div>

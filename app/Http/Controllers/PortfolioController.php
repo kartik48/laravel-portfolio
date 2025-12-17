@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Fluent;
 
 class PortfolioController extends Controller
 {
     public function index()
     {
-        $projects = Project::latest()->take(3)->get();
+        $projectsData = config('projects');
+        $projects = collect($projectsData)->take(3)->map(function ($project) {
+            return new Fluent($project + ['thumbnail_url' => $project['thumbnail']]);
+        });
+        
         return view('home', compact('projects'));
     }
 
@@ -20,7 +24,11 @@ class PortfolioController extends Controller
 
     public function projects()
     {
-        $projects = Project::latest()->get();
+        $projectsData = config('projects');
+        $projects = collect($projectsData)->map(function ($project) {
+            return new Fluent($project + ['thumbnail_url' => $project['thumbnail']]);
+        });
+
         return view('projects.index', compact('projects'));
     }
 

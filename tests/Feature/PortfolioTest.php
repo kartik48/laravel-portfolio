@@ -2,13 +2,10 @@
 
 namespace Tests\Feature;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
-use App\Models\Project;
 
 class PortfolioTest extends TestCase
 {
-    use RefreshDatabase;
 
     public function test_home_page_loads()
     {
@@ -26,15 +23,9 @@ class PortfolioTest extends TestCase
 
     public function test_projects_page_loads()
     {
-        Project::create([
-            'title' => 'Test Project',
-            'description' => 'This is a test project',
-            'tags' => ['Laravel', 'PHP']
-        ]);
-
         $response = $this->get('/projects');
         $response->assertStatus(200);
-        $response->assertSee('Test Project');
+        $response->assertSee('Portfolio Website');
     }
 
     public function test_contact_page_loads()
