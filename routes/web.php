@@ -11,6 +11,3 @@ Route::get('/contact', [PortfolioController::class, 'contact'])->name('contact')
 
 // Admin Routes Removed
 
-Route::get('/test', function () {
-    return 'it works';
-});
