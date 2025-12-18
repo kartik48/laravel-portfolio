@@ -2,35 +2,19 @@
 
 return [
     [
-        'title' => 'Portfolio Website',
-        'description' => 'My personal portfolio website (this one!). Built with Laravel and Tailwind CSS. Showcases my projects and skills.',
-        'thumbnail' => 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        'link' => '/',
-        'tags' => ['Laravel', 'Tailwind CSS', 'SQLite'],
+        'title' => "Kartik's Portfolio Website",
+        'description' => "A personal portfolio website built with Laravel 11 and Tailwind CSS. This project showcases my skills, professional experience, and featured projects. It features a fully responsive design, database integration with SQLite for project management, and a clean, modern user interface built with Blade templates.",
+        'thumbnail' => 'portfolio-project.png',
+        'link' => 'https://github.com/kartik48/laravel-portfolio',
+        'tags' => ['Laravel 11', 'Tailwind CSS', 'SQLite', 'Blade'],
         'category' => 'development'
     ],
     [
-        'title' => 'E-Commerce Dashboard',
-        'description' => 'A comprehensive dashboard for managing online stores. Features include real-time sales tracking, inventory management, and customer analytics.',
-        'thumbnail' => 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        'link' => '#',
-        'tags' => ['Vue.js', 'Laravel', 'MySQL'],
+        'title' => "Sunita's Creations",
+        'description' => "An e-commerce platform for authentic Warli and Rajasthani handicrafts, built with Laravel 12. Created as a gift for my mother to showcase her traditional art. Features include a Warli-inspired aesthetic, a full admin panel for product management, category browsing, and a tag-based filtering system.",
+        'thumbnail' => 'sunitas-creation.png',
+        'link' => 'https://github.com/kartik48/sunitas_creations',
+        'tags' => ['Laravel 12', 'Tailwind CSS', 'E-commerce', 'Blade'],
         'category' => 'development'
-    ],
-    [
-        'title' => 'Task Management App',
-        'description' => 'A productivity tool designed to help teams collaborate efficiently. Includes features like kanban boards, task assignment, and progress tracking.',
-        'thumbnail' => 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        'link' => '#',
-        'tags' => ['React', 'Node.js', 'MongoDB'],
-        'category' => 'development'
-    ],
-    [
-        'title' => 'Weather Forecast API',
-        'description' => 'A RESTful API that provides accurate weather data for any location. Built with performance and scalability in mind.',
-        'thumbnail' => 'https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
-        'link' => '#',
-        'tags' => ['Python', 'FastAPI', 'Redis'],
-        'category' => 'backend'
     ],
 ];

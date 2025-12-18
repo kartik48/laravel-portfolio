@@ -11,7 +11,11 @@ class PortfolioController extends Controller
     {
         $projectsData = config('projects');
         $projects = collect($projectsData)->take(3)->map(function ($project) {
-            return new Fluent($project + ['thumbnail_url' => $project['thumbnail']]);
+            $thumbnail = $project['thumbnail'];
+            if (!\Illuminate\Support\Str::startsWith($thumbnail, ['http://', 'https://'])) {
+                $thumbnail = asset($thumbnail);
+            }
+            return new Fluent($project + ['thumbnail_url' => $thumbnail, 'image_url' => $thumbnail]);
         });
         
         return view('home', compact('projects'));
@@ -26,7 +30,11 @@ class PortfolioController extends Controller
     {
         $projectsData = config('projects');
         $projects = collect($projectsData)->map(function ($project) {
-            return new Fluent($project + ['thumbnail_url' => $project['thumbnail']]);
+            $thumbnail = $project['thumbnail'];
+            if (!\Illuminate\Support\Str::startsWith($thumbnail, ['http://', 'https://'])) {
+                $thumbnail = asset($thumbnail);
+            }
+            return new Fluent($project + ['thumbnail_url' => $thumbnail, 'image_url' => $thumbnail]);
         });
 
         return view('projects.index', compact('projects'));

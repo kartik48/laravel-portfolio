@@ -25,7 +25,7 @@ class PortfolioTest extends TestCase
     {
         $response = $this->get('/projects');
         $response->assertStatus(200);
-        $response->assertSee('Portfolio Website');
+        $response->assertSee("Kartik's Portfolio Website");
     }
 
     public function test_contact_page_loads()
