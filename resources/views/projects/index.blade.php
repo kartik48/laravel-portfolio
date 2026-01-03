@@ -78,7 +78,7 @@
 
                 <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
-                <div x-show="activeProject" class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+                <div x-show="activeProject" class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full sm:p-6">
                     <div class="hidden sm:block absolute top-0 right-0 pt-4 pr-4">
                         <button @click="activeProject = null" type="button" class="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span class="sr-only">Close</span>
@@ -91,10 +91,26 @@
                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
                             <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title" x-text="activeProject?.title"></h3>
                             <div class="mt-2">
-                                <img :src="activeProject?.image_url || 'https://via.placeholder.com/400x300'" alt="" class="w-full h-64 object-cover rounded-md mb-4">
-                                <p class="text-sm text-gray-500" x-text="activeProject?.description"></p>
-                                <div class="mt-4" x-show="activeProject?.link">
-                                    <a :href="activeProject?.link" target="_blank" class="text-indigo-600 hover:text-indigo-500 font-medium">View Project &rarr;</a>
+                                <img :src="activeProject?.image_url || 'https://via.placeholder.com/400x300'" alt="" class="w-full h-96 object-cover rounded-md mb-4">
+                                
+                                <div class="mt-4">
+                                    <h4 class="text-sm font-medium text-gray-900">Tech Stack</h4>
+                                    <div class="mt-2 flex flex-wrap gap-2">
+                                        <template x-for="tag in activeProject?.tags" :key="tag">
+                                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800" x-text="tag"></span>
+                                        </template>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <h4 class="text-sm font-medium text-gray-900">Description</h4>
+                                    <p class="mt-2 text-sm text-gray-500" x-text="activeProject?.description"></p>
+                                </div>
+
+                                <div class="mt-6" x-show="activeProject?.link">
+                                    <a :href="activeProject?.link" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        View Project &rarr;
+                                    </a>
                                 </div>
                             </div>
                         </div>

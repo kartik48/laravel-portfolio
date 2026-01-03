@@ -17,4 +17,12 @@ return [
         'tags' => ['Laravel 12', 'Tailwind CSS', 'E-commerce', 'Blade'],
         'category' => 'development'
     ],
+    [
+        'title' => "Crumbs & Co.",
+        'description' => "A modern, responsive website for Crumbs & Co., an artisanal bakery based in Jodhpur, India. Features include an auto-scrolling product carousel, product categories showcase, contact page with Google Maps, and WhatsApp/Instagram integration for easy ordering.",
+        'thumbnail' => 'crumbs-co.png',
+        'link' => 'https://github.com/kartik48/crumbs-co',
+        'tags' => ['Next.js 14', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL'],
+        'category' => 'development'
+    ],
 ];
