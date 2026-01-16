@@ -45,6 +45,7 @@
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">PHP</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Python</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Java</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">SQL</span>
                         </div>
                     </div>
@@ -59,6 +60,9 @@
                         </h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Next.js</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Node.js</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Flask</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">RESTful APIs</span>
                         </div>
