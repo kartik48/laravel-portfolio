@@ -60,6 +60,7 @@
                         </h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Spring Boot</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">React</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Next.js</span>
                             <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-medium">Node.js</span>
