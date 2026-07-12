@@ -102,7 +102,7 @@
                 <div class="max-w-2xl mx-auto">
                     <h2 class="font-display text-3xl tracking-wide text-red-500 mb-3">Looking for collaboration?</h2>
                     <p class="text-gray-300 text-lg">
-                        I'm currently open to new opportunities and interesting projects. Whether it's full-stack development, data analysis, or something in between, I'd love to hear from you!
+                        I'm currently open to new opportunities and interesting projects. Whether it's data analysis, data engineering, or building with AI, I'd love to hear from you!
                     </p>
                 </div>
             </div>

@@ -20,7 +20,7 @@ class Project extends Model
     public function getThumbnailUrlAttribute()
     {
         if (!$this->thumbnail) {
-            return 'https://via.placeholder.com/400x300';
+            return 'https://placehold.co/400x300';
         }
         if (\Illuminate\Support\Str::startsWith($this->thumbnail, ['http://', 'https://'])) {
             return $this->thumbnail;
@@ -33,7 +33,7 @@ class Project extends Model
         $image = $this->image ?: $this->thumbnail;
         
         if (!$image) {
-            return 'https://via.placeholder.com/400x300';
+            return 'https://placehold.co/400x300';
         }
 
         if (\Illuminate\Support\Str::startsWith($image, ['http://', 'https://'])) {

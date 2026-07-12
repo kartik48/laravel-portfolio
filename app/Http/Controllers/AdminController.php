@@ -49,7 +49,7 @@ class AdminController extends Controller
             'thumbnail' => 'nullable|string',
             'image' => 'nullable|string',
             'link' => 'nullable|string',
-            'category' => 'required|in:data,development',
+            'category' => 'required|in:data,development,ai-agents',
             'tags' => 'nullable|string', // Comma separated
         ]);
 
@@ -75,7 +75,7 @@ class AdminController extends Controller
             'thumbnail' => 'nullable|string',
             'image' => 'nullable|string',
             'link' => 'nullable|string',
-            'category' => 'required|in:data,development',
+            'category' => 'required|in:data,development,ai-agents',
             'tags' => 'nullable|string',
         ]);
 

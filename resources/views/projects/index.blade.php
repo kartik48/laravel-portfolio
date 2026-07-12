@@ -3,7 +3,7 @@
 @section('title', 'Projects - My Portfolio')
 
 @section('content')
-    <div class="bg-black min-h-screen py-16" x-data="{ activeTab: 'development', activeProject: null }">
+    <div class="bg-black min-h-screen py-16" x-data="{ activeTab: 'ai-agents', activeProject: null }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header -->
             <div class="text-center mb-12">
@@ -18,10 +18,20 @@
 
             <!-- Tabs -->
             <div class="flex justify-center mb-12">
-                <div class="border-2 border-gray-700 inline-flex">
+                <div class="border-2 border-gray-700 inline-flex flex-wrap">
+                    <button @click="activeTab = 'ai-agents'"
+                        :class="activeTab === 'ai-agents' ? 'bg-red-600 text-black' : 'text-gray-400 hover:text-red-400'"
+                        class="px-6 py-3 font-bold text-sm uppercase tracking-wider transition-colors duration-200">
+                        <span class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.616a1 1 0 01.894-1.79l1.599.8L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"/>
+                            </svg>
+                            AI Agents
+                        </span>
+                    </button>
                     <button @click="activeTab = 'development'"
                         :class="activeTab === 'development' ? 'bg-red-600 text-black' : 'text-gray-400 hover:text-red-400'"
-                        class="px-6 py-3 font-bold text-sm uppercase tracking-wider transition-colors duration-200">
+                        class="px-6 py-3 font-bold text-sm uppercase tracking-wider transition-colors duration-200 border-l-2 border-gray-700">
                         <span class="flex items-center">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"/>
@@ -52,7 +62,7 @@
                             <span class="h-2 w-2 rounded-full bg-gray-700"></span>
                         </div>
                         <div class="flex-shrink-0 relative overflow-hidden">
-                            <img class="h-56 w-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-300" src="{{ $project->thumbnail_url ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
+                            <img class="h-56 w-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-300" src="{{ $project->thumbnail_url ?? 'https://placehold.co/400x300' }}" alt="{{ $project->title }}">
                             <div class="absolute inset-0 bg-red-900/0 group-hover:bg-red-900/10 transition-colors duration-300"></div>
                         </div>
                         <div class="flex-1 p-6 flex flex-col justify-between">
@@ -112,7 +122,7 @@
                     <div class="w-full p-6 sm:p-8">
                         <h3 class="font-display text-4xl tracking-wide text-red-500 mb-6" id="modal-title" x-text="activeProject?.title"></h3>
 
-                        <img :src="activeProject?.image_url || 'https://via.placeholder.com/400x300'" alt="" class="w-full h-80 object-cover border-2 border-gray-800 mb-6">
+                        <img :src="activeProject?.image_url || 'https://placehold.co/400x300'" alt="" class="w-full h-80 object-cover border-2 border-gray-800 mb-6">
 
                         <div class="border border-gray-800 bg-black p-6 mb-6">
                             <h4 class="text-sm font-bold uppercase tracking-widest text-gray-100 mb-3 flex items-center">

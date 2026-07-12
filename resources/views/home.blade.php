@@ -13,10 +13,10 @@
                     <span class="block text-red-500 text-glow">Kartik<span class="terminal-cursor">_</span></span>
                 </h1>
                 <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-gray-400 leading-relaxed">
-                    A data analyst and full-stack developer with a strong foundation in Python, SQL, and Laravel/PHP. I specialise in turning data into insight and ideas into reliable software. With experience across analytics projects, machine-learning prototypes, operational dashboards, and end-to-end web application development, I enjoy solving real problems from both sides, understanding the data and building the tools that make it useful.
+                    An analyst and engineer working across data, software, and AI. My background spans data analysis, business analysis, and web development with Python, SQL, and Laravel/PHP, and I'm now focused on using AI across development, analysis, and building data pipelines.
                 </p>
                 <p class="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-gray-500">
-                    Curious, hands-on, and product-focused, I'm drawn to work that blends analysis, engineering, and meaningful impact.
+                    Curious and hands-on, I like starting with the data, then building the dashboards, agents, and applications that make it useful.
                 </p>
                 <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="{{ route('projects.index') }}" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold uppercase tracking-wider text-black bg-red-600 hover:bg-red-500 border-2 border-red-400 shadow-[4px_4px_0_0_rgba(220,38,38,0.5)] transition-colors">
@@ -57,7 +57,7 @@
                             <span class="h-2 w-2 rounded-full bg-gray-700"></span>
                         </div>
                         <div class="flex-shrink-0 relative overflow-hidden">
-                            <img class="h-56 w-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-300" src="{{ $project->thumbnail_url ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
+                            <img class="h-56 w-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-300" src="{{ $project->thumbnail_url ?? 'https://placehold.co/400x300' }}" alt="{{ $project->title }}">
                             <div class="absolute inset-0 bg-red-900/0 group-hover:bg-red-900/10 transition-colors duration-300"></div>
                         </div>
                         <div class="flex-1 p-6 flex flex-col justify-between">
@@ -117,7 +117,7 @@
                     <div class="w-full p-6 sm:p-8">
                         <h3 class="font-display text-4xl tracking-wide text-red-500 mb-6" id="modal-title" x-text="activeProject?.title"></h3>
 
-                        <img :src="activeProject?.image_url || 'https://via.placeholder.com/400x300'" alt="" class="w-full h-80 object-cover border-2 border-gray-800 mb-6">
+                        <img :src="activeProject?.image_url || 'https://placehold.co/400x300'" alt="" class="w-full h-80 object-cover border-2 border-gray-800 mb-6">
 
                         <div class="border border-gray-800 bg-black p-6 mb-6">
                             <h4 class="text-sm font-bold uppercase tracking-widest text-gray-100 mb-3 flex items-center">

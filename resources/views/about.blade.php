@@ -13,7 +13,7 @@
                     About <span class="text-red-500">Me</span>
                 </h1>
                 <p class="mt-4 text-xl text-red-400 font-bold">
-                    Passionate Developer &amp; Problem Solver
+                    Analyst &amp; Engineer, Working Across Data and AI
                 </p>
             </div>
 
@@ -21,10 +21,10 @@
             <div class="mb-20">
                 <div class="bg-neutral-900 border-2 border-gray-700 p-8 max-w-4xl mx-auto">
                     <p class="text-lg text-gray-300 leading-relaxed">
-                        Hello! I'm a software developer with a passion for building scalable and user-friendly web applications. I have experience working with modern technologies like Laravel, Vue.js, React, and Tailwind CSS.
+                        Hello! I'm an analyst and engineer with a background spanning data analysis, business analysis, and web development. I've worked with Laravel, Python, SQL, and more recently AI agents, and I'm currently focused on using AI across development, analysis, and building data pipelines.
                     </p>
                     <p class="text-lg text-gray-300 leading-relaxed mt-4">
-                        I started my coding journey 5 years ago and have been loving every minute of it. I enjoy solving complex problems and learning new things.
+                        I started building software 5 years ago and have gradually moved toward data and AI along the way. I enjoy solving practical problems and picking up new tools as the work calls for them.
                     </p>
                 </div>
             </div>
@@ -99,9 +99,9 @@
                             <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[Pandas]</span>
                             <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[NumPy]</span>
                             <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[ML Basics]</span>
-                            <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[Claude]</span>
-                            <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[Lovable]</span>
-                            <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[Antigravity]</span>
+                            <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[AI Agents]</span>
+                            <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[Agentic Workflows]</span>
+                            <span class="px-2 py-0.5 border border-gray-700 text-red-400 text-sm">[Prompt Engineering]</span>
                         </div>
                     </div>
 
@@ -134,53 +134,48 @@
                     <!-- Experience 1 -->
                     <div class="bg-neutral-900 border-2 border-red-800 overflow-hidden">
                         <div class="bg-black border-b-2 border-red-800 px-6 py-4">
-                            <h3 class="text-xl font-bold text-gray-100">Software Developer / Technical Consultant</h3>
-                            <p class="text-red-400 font-medium">Industrial Metal Components, Jodhpur, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Mar 2020 - Jun 2022</p>
+                            <h3 class="text-xl font-bold text-gray-100">Operations Optimisation Analyst</h3>
+                            <p class="text-red-400 font-medium">TPG Telecom, Australia</p>
+                            <p class="text-gray-500 text-sm mt-1">May 2026 - Present</p>
                         </div>
                         <div class="px-6 py-5">
+                            <p class="text-gray-300 mb-4">Supporting Customer Operations performance reporting and analysis across TPG Telecom brands.</p>
                             <ul class="space-y-3 text-gray-300">
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span>Modernised internal business systems by migrating legacy PHP applications into Laravel MVC, improving system reliability, maintainability, and reducing future development overhead.</span>
+                                    <span>Analyse large telecommunications datasets and speech analytics to identify operational trends and improvement opportunities.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span>Collaborated with operations, management, and production teams to understand workflow requirements and translate them into functional, data-driven software features.</span>
+                                    <span>Build and maintain Power BI dashboards and automated reporting for daily, weekly, monthly, and quarterly stakeholder updates.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span>Designed and optimised SQL queries, performed data cleaning and validation, and improved the accuracy of internal reporting used for inventory, production planning, and operational decision-making.</span>
+                                    <span>Use SQL and Python to extract, transform, and analyse data from multiple sources.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span>Troubleshot full-stack issues across APIs, authentication flows, database queries, and cloud-hosted environments, increasing system stability and reducing recurring errors.</span>
+                                    <span>Design PowerPoint presentations and data visualisations for operational, management, and executive audiences.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span>Built reusable components, automated manual workflows, and implemented analytical insights that improved process efficiency across departments.</span>
+                                    <span>Collaborate with Customer Operations leadership, Workforce Planning, Quality, and Business Intelligence teams.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
-                                    <span>Supported the organisation's cloud migration and remote-access setup during COVID-19, ensuring smooth adoption and uninterrupted operations.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Participated in Agile development cycles, documented technical workflows, and contributed to both feature development and system maintenance.</span>
+                                    <span>Maintain KPI definitions and simplify reporting processes across brands.</span>
                                 </li>
                             </ul>
                         </div>
@@ -189,46 +184,9 @@
                     <!-- Experience 2 -->
                     <div class="bg-neutral-900 border-2 border-red-800 overflow-hidden">
                         <div class="bg-black border-b-2 border-red-800 px-6 py-4">
-                            <h3 class="text-xl font-bold text-gray-100">Web Application Developer</h3>
-                            <p class="text-red-400 font-medium">Sarga Technologies, Jodhpur, India</p>
-                            <p class="text-gray-500 text-sm mt-1">Jul 2016 - May 2018</p>
-                        </div>
-                        <div class="px-6 py-5">
-                            <ul class="space-y-3 text-gray-300">
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Built and maintained client-facing web applications using Laravel, PHP, JavaScript, and SQL.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Redesigned legacy websites, improving scalability, responsiveness, and security.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Developed reusable components and plugins to accelerate future project delivery.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                                    </svg>
-                                    <span>Collaborated with clients to understand business needs and implement effective technical solutions.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Experience 3 -->
-                    <div class="bg-neutral-900 border-2 border-red-800 overflow-hidden">
-                        <div class="bg-black border-b-2 border-red-800 px-6 py-4">
                             <h3 class="text-xl font-bold text-gray-100">Customer Solutions Advisor</h3>
                             <p class="text-red-400 font-medium">TPG Telecom, Australia</p>
-                            <p class="text-gray-500 text-sm mt-1">Aug 2024 - Present</p>
+                            <p class="text-gray-500 text-sm mt-1">Aug 2024 - May 2026</p>
                         </div>
                         <div class="px-6 py-5">
                             <ul class="space-y-3 text-gray-300">
@@ -261,6 +219,98 @@
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                     </svg>
                                     <span>Build strong rapport with customers, delivering service that balances problem-solving with commercial awareness.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="bg-neutral-900 border-2 border-red-800 overflow-hidden">
+                        <div class="bg-black border-b-2 border-red-800 px-6 py-4">
+                            <h3 class="text-xl font-bold text-gray-100">Software Developer / Technical Consultant</h3>
+                            <p class="text-red-400 font-medium">Industrial Metal Components, Jodhpur, India</p>
+                            <p class="text-gray-500 text-sm mt-1">Mar 2020 - Jun 2022</p>
+                        </div>
+                        <div class="px-6 py-5">
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Modernised internal business systems by migrating legacy PHP applications into Laravel MVC, improving system reliability, maintainability, and reducing future development overhead.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Collaborated with operations, management, and production teams to understand workflow requirements and translate them into functional, data-driven software features.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Wrote and tuned SQL queries, cleaned and validated data, and improved the accuracy of internal reports used for inventory, production planning, and operational decisions.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Troubleshot full-stack issues across APIs, authentication flows, database queries, and cloud-hosted environments, increasing system stability and reducing recurring errors.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Built reusable components, automated manual workflows, and implemented analytical insights that improved process efficiency across departments.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Supported the organisation's cloud migration and remote-access setup during COVID-19, ensuring smooth adoption and uninterrupted operations.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Participated in Agile development cycles, documented technical workflows, and contributed to both feature development and system maintenance.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 -->
+                    <div class="bg-neutral-900 border-2 border-red-800 overflow-hidden">
+                        <div class="bg-black border-b-2 border-red-800 px-6 py-4">
+                            <h3 class="text-xl font-bold text-gray-100">Web Application Developer</h3>
+                            <p class="text-red-400 font-medium">Sarga Technologies, Jodhpur, India</p>
+                            <p class="text-gray-500 text-sm mt-1">Jul 2016 - May 2018</p>
+                        </div>
+                        <div class="px-6 py-5">
+                            <ul class="space-y-3 text-gray-300">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Built and maintained client-facing web applications using Laravel, PHP, JavaScript, and SQL.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Redesigned legacy websites, improving scalability, responsiveness, and security.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Developed reusable components and plugins to accelerate future project delivery.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-red-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <span>Collaborated with clients to understand business needs and build technical solutions that fit them.</span>
                                 </li>
                             </ul>
                         </div>
