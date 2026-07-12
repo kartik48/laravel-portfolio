@@ -3,24 +3,25 @@
 @section('title', 'Projects - My Portfolio')
 
 @section('content')
-    <div class="bg-gradient-to-b from-white to-gray-50 min-h-screen py-16" x-data="{ activeTab: 'development', activeProject: null }">
+    <div class="bg-black min-h-screen py-16" x-data="{ activeTab: 'development', activeProject: null }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header -->
             <div class="text-center mb-12">
-                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-                    All Projects
+                <p class="font-display text-xl text-gray-500 mb-1">&gt; ls -la ./projects</p>
+                <h1 class="font-display text-5xl tracking-wide text-gray-100 sm:text-6xl">
+                    All <span class="text-red-500">Projects</span>
                 </h1>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
+                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
                     A collection of my work, side projects, and experiments.
                 </p>
             </div>
 
             <!-- Tabs -->
             <div class="flex justify-center mb-12">
-                <div class="bg-white rounded-xl shadow-md p-1 inline-flex">
+                <div class="border-2 border-gray-700 inline-flex">
                     <button @click="activeTab = 'development'"
-                        :class="activeTab === 'development' ? 'bg-indigo-600 text-white shadow-sm' : 'text-gray-600 hover:text-gray-900'"
-                        class="px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200">
+                        :class="activeTab === 'development' ? 'bg-red-600 text-black' : 'text-gray-400 hover:text-red-400'"
+                        class="px-6 py-3 font-bold text-sm uppercase tracking-wider transition-colors duration-200">
                         <span class="flex items-center">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"/>
@@ -29,8 +30,8 @@
                         </span>
                     </button>
                     <button @click="activeTab = 'data'"
-                        :class="activeTab === 'data' ? 'bg-indigo-600 text-white shadow-sm' : 'text-gray-600 hover:text-gray-900'"
-                        class="px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-200">
+                        :class="activeTab === 'data' ? 'bg-red-600 text-black' : 'text-gray-400 hover:text-red-400'"
+                        class="px-6 py-3 font-bold text-sm uppercase tracking-wider transition-colors duration-200 border-l-2 border-gray-700">
                         <span class="flex items-center">
                             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
@@ -44,35 +45,40 @@
             <!-- Projects Grid -->
             <div class="grid gap-8 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
                 @foreach($projects as $project)
-                    <div x-show="activeTab === '{{ $project->category }}'" class="group flex flex-col bg-white rounded-2xl shadow-md hover:shadow-2xl overflow-hidden border border-gray-100 transition-all duration-300 transform hover:-translate-y-2">
+                    <div x-show="activeTab === '{{ $project->category }}'" class="group flex flex-col bg-neutral-900 border-2 border-gray-700 hover:border-red-600 overflow-hidden transition-colors duration-200">
+                        <div class="bg-neutral-950 border-b border-gray-800 px-3 py-1.5 flex items-center gap-1.5">
+                            <span class="h-2 w-2 rounded-full bg-red-600"></span>
+                            <span class="h-2 w-2 rounded-full bg-gray-600"></span>
+                            <span class="h-2 w-2 rounded-full bg-gray-700"></span>
+                        </div>
                         <div class="flex-shrink-0 relative overflow-hidden">
-                            <img class="h-56 w-full object-cover transition-transform duration-300 group-hover:scale-110" src="{{ $project->thumbnail_url ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img class="h-56 w-full object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-300" src="{{ $project->thumbnail_url ?? 'https://via.placeholder.com/400x300' }}" alt="{{ $project->title }}">
+                            <div class="absolute inset-0 bg-red-900/0 group-hover:bg-red-900/10 transition-colors duration-300"></div>
                         </div>
                         <div class="flex-1 p-6 flex flex-col justify-between">
                             <div class="flex-1">
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     @if($project->tags)
                                         @foreach($project->tags as $tag)
-                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-700">
-                                                {{ $tag }}
+                                            <span class="inline-flex items-center px-2 py-0.5 text-xs border border-gray-700 text-red-400">
+                                                [{{ $tag }}]
                                             </span>
                                         @endforeach
                                     @endif
                                 </div>
                                 <a href="#" @click.prevent="activeProject = {{ json_encode($project) }}" class="block">
-                                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                                    <h3 class="font-display text-2xl tracking-wide text-gray-100 group-hover:text-red-400 transition-colors">
                                         {{ $project->title }}
                                     </h3>
-                                    <p class="mt-3 text-base text-gray-600 leading-relaxed">
+                                    <p class="mt-3 text-sm text-gray-400 leading-relaxed">
                                         {{ Str::limit($project->description, 100) }}
                                     </p>
                                 </a>
                             </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100">
-                                <button @click="activeProject = {{ json_encode($project) }}" class="inline-flex items-center text-base font-semibold text-indigo-600 hover:text-indigo-700 group-hover:gap-2 transition-all">
+                            <div class="mt-6 pt-4 border-t border-gray-800">
+                                <button @click="activeProject = {{ json_encode($project) }}" class="inline-flex items-center text-sm font-bold uppercase tracking-wider text-red-500 hover:text-red-400 group-hover:gap-2 transition-all">
                                     View Details
-                                    <svg class="w-5 h-5 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg class="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                                     </svg>
                                 </button>
@@ -86,44 +92,49 @@
         <!-- Modal -->
         <div x-show="activeProject" class="fixed z-50 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" style="display: none;">
             <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:p-0">
-                <div x-show="activeProject" @click="activeProject = null" class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" aria-hidden="true"></div>
+                <div x-show="activeProject" @click="activeProject = null" class="fixed inset-0 bg-black bg-opacity-85 transition-opacity" aria-hidden="true"></div>
 
-                <div x-show="activeProject" class="inline-block align-bottom bg-white rounded-2xl px-4 pt-5 pb-4 text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-5xl sm:w-full sm:p-8">
-                    <div class="absolute top-0 right-0 pt-4 pr-4">
-                        <button @click="activeProject = null" type="button" class="bg-white rounded-full p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all">
+                <div x-show="activeProject" class="inline-block align-bottom bg-neutral-900 border-2 border-red-700 text-left overflow-hidden shadow-[8px_8px_0_0_rgba(220,38,38,0.4)] transform transition-all sm:my-8 sm:align-middle sm:max-w-5xl sm:w-full">
+                    <div class="bg-neutral-950 border-b border-gray-800 px-4 py-2 flex items-center justify-between">
+                        <div class="flex items-center gap-1.5">
+                            <span class="h-2.5 w-2.5 rounded-full bg-red-600"></span>
+                            <span class="h-2.5 w-2.5 rounded-full bg-gray-600"></span>
+                            <span class="h-2.5 w-2.5 rounded-full bg-gray-700"></span>
+                        </div>
+                        <button @click="activeProject = null" type="button" class="text-gray-500 hover:text-red-500 transition-colors">
                             <span class="sr-only">Close</span>
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
 
-                    <div class="w-full">
-                        <h3 class="text-3xl font-bold text-gray-900 mb-6" id="modal-title" x-text="activeProject?.title"></h3>
+                    <div class="w-full p-6 sm:p-8">
+                        <h3 class="font-display text-4xl tracking-wide text-red-500 mb-6" id="modal-title" x-text="activeProject?.title"></h3>
 
-                        <img :src="activeProject?.image_url || 'https://via.placeholder.com/400x300'" alt="" class="w-full h-80 object-cover rounded-xl mb-6 shadow-md">
+                        <img :src="activeProject?.image_url || 'https://via.placeholder.com/400x300'" alt="" class="w-full h-80 object-cover border-2 border-gray-800 mb-6">
 
-                        <div class="bg-indigo-50 rounded-xl p-6 mb-6">
-                            <h4 class="text-lg font-bold text-gray-900 mb-3 flex items-center">
-                                <svg class="w-5 h-5 mr-2 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="border border-gray-800 bg-black p-6 mb-6">
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-gray-100 mb-3 flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-red-500" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"/>
                                 </svg>
                                 Tech Stack
                             </h4>
                             <div class="flex flex-wrap gap-2">
                                 <template x-for="tag in activeProject?.tags" :key="tag">
-                                    <span class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-white text-indigo-700 shadow-sm" x-text="tag"></span>
+                                    <span class="inline-flex items-center px-2 py-1 text-sm border border-gray-700 text-red-400" x-text="'[' + tag + ']'"></span>
                                 </template>
                             </div>
                         </div>
 
                         <div class="mb-6">
-                            <h4 class="text-lg font-bold text-gray-900 mb-3">Description</h4>
-                            <p class="text-base text-gray-700 leading-relaxed" x-text="activeProject?.description"></p>
+                            <h4 class="text-sm font-bold uppercase tracking-widest text-gray-100 mb-3">Description</h4>
+                            <p class="text-base text-gray-400 leading-relaxed whitespace-pre-line" x-text="activeProject?.description"></p>
                         </div>
 
                         <div x-show="activeProject?.link">
-                            <a :href="activeProject?.link" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-semibold rounded-lg shadow-md text-white bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all">
+                            <a :href="activeProject?.link" target="_blank" class="inline-flex items-center px-6 py-3 text-base font-bold uppercase tracking-wider text-black bg-red-600 hover:bg-red-500 border-2 border-red-400 transition-colors">
                                 <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
                                     <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>

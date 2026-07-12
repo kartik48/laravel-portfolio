@@ -8,39 +8,70 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Share Tech Mono', ui-monospace, monospace;
+        }
+        .font-display {
+            font-family: 'VT323', ui-monospace, monospace;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 3px);
+            z-index: 999;
+        }
+        .text-glow {
+            text-shadow: 0 0 8px currentColor, 0 0 20px currentColor;
+        }
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        .terminal-cursor {
+            animation: blink 1s steps(1) infinite;
+        }
+        .bg-grid {
+            background-image: linear-gradient(rgba(220,38,38,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(220,38,38,0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased flex flex-col min-h-screen">
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+<body class="bg-black text-gray-300 antialiased flex flex-col min-h-screen">
+    <header class="bg-black border-b-2 border-red-700 sticky top-0 z-50">
+        <div class="bg-neutral-900 border-b border-gray-800 px-4 py-1.5 flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-red-600"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-gray-600"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-gray-700"></span>
+            <span class="ml-3 text-xs text-gray-500 truncate">kartik@portfolio:~{{ request()->path() === '/' ? '' : '/'.request()->path() }}$</span>
+        </div>
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="shrink-0 flex items-center">
-                        <a href="{{ route('home') }}" class="font-bold text-xl text-indigo-600">Portfolio</a>
+                        <a href="{{ route('home') }}" class="font-display text-2xl tracking-wider text-red-500 text-glow">&gt; PORTFOLIO_</a>
                     </div>
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="{{ route('home') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('home') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
-                            Home
+                    <div class="hidden sm:ml-8 sm:flex sm:space-x-1">
+                        <a href="{{ route('home') }}" class="inline-flex items-center px-4 py-2 text-sm border {{ request()->routeIs('home') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:border-gray-700 hover:text-gray-100' }} transition-colors">
+                            [ home ]
                         </a>
-                        <a href="{{ route('about') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('about') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
-                            About
+                        <a href="{{ route('about') }}" class="inline-flex items-center px-4 py-2 text-sm border {{ request()->routeIs('about') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:border-gray-700 hover:text-gray-100' }} transition-colors">
+                            [ about ]
                         </a>
-                        <a href="{{ route('projects.index') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('projects.*') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
-                            Projects
+                        <a href="{{ route('projects.index') }}" class="inline-flex items-center px-4 py-2 text-sm border {{ request()->routeIs('projects.*') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:border-gray-700 hover:text-gray-100' }} transition-colors">
+                            [ projects ]
                         </a>
-                        <a href="{{ route('contact') }}" class="inline-flex items-center px-1 pt-1 border-b-2 {{ request()->routeIs('contact') ? 'border-indigo-500 text-gray-900' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700' }} text-sm font-medium">
-                            Contact
+                        <a href="{{ route('contact') }}" class="inline-flex items-center px-4 py-2 text-sm border {{ request()->routeIs('contact') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:border-gray-700 hover:text-gray-100' }} transition-colors">
+                            [ contact ]
                         </a>
                     </div>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="-mr-2 flex items-center sm:hidden">
-                    <button type="button" class="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <button type="button" class="inline-flex items-center justify-center p-2 text-red-500 border border-gray-700 hover:border-red-600" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -49,53 +80,53 @@
                 </div>
             </div>
         </nav>
-        
+
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden hidden" id="mobile-menu">
-            <div class="pt-2 pb-3 space-y-1">
-                <a href="{{ route('home') }}" class="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Home</a>
-                <a href="{{ route('about') }}" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
-                <a href="{{ route('projects.index') }}" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Projects</a>
-                <a href="{{ route('contact') }}" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Contact</a>
+        <div class="sm:hidden hidden border-t border-gray-800" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1 px-2">
+                <a href="{{ route('home') }}" class="block px-3 py-2 text-sm border-l-2 {{ request()->routeIs('home') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:bg-neutral-900' }}">[ home ]</a>
+                <a href="{{ route('about') }}" class="block px-3 py-2 text-sm border-l-2 {{ request()->routeIs('about') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:bg-neutral-900' }}">[ about ]</a>
+                <a href="{{ route('projects.index') }}" class="block px-3 py-2 text-sm border-l-2 {{ request()->routeIs('projects.*') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:bg-neutral-900' }}">[ projects ]</a>
+                <a href="{{ route('contact') }}" class="block px-3 py-2 text-sm border-l-2 {{ request()->routeIs('contact') ? 'border-red-600 text-red-400 bg-red-950/30' : 'border-transparent text-gray-400 hover:bg-neutral-900' }}">[ contact ]</a>
             </div>
         </div>
     </header>
 
-    <main class="flex-grow">
+    <main class="flex-grow bg-black">
         @yield('content')
     </main>
 
-    <footer class="bg-gradient-to-br from-gray-900 to-gray-800 mt-auto">
+    <footer class="bg-black border-t-2 border-red-700">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col items-center space-y-6">
                 <!-- Social Links -->
-                <div class="flex space-x-6">
-                    <a href="https://github.com/kartik48" target="_blank" class="group bg-gray-800 p-3 rounded-lg hover:bg-gray-700 transition-all duration-200 transform hover:-translate-y-1">
+                <div class="flex space-x-4">
+                    <a href="https://github.com/kartik48" target="_blank" class="group border border-gray-700 p-3 hover:border-red-600 transition-colors">
                         <span class="sr-only">GitHub</span>
-                        <svg class="h-6 w-6 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg class="h-6 w-6 text-gray-400 group-hover:text-red-500 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/kartik48/" target="_blank" class="group bg-gray-800 p-3 rounded-lg hover:bg-blue-600 transition-all duration-200 transform hover:-translate-y-1">
+                    <a href="https://www.linkedin.com/in/kartik48/" target="_blank" class="group border border-gray-700 p-3 hover:border-red-600 transition-colors">
                         <span class="sr-only">LinkedIn</span>
-                        <svg class="h-6 w-6 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <svg class="h-6 w-6 text-gray-400 group-hover:text-red-500 transition-colors" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd" />
                         </svg>
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="flex flex-wrap justify-center gap-x-8 gap-y-2">
-                    <a href="{{ route('home') }}" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">Home</a>
-                    <a href="{{ route('about') }}" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">About</a>
-                    <a href="{{ route('projects.index') }}" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">Projects</a>
-                    <a href="{{ route('contact') }}" class="text-gray-400 hover:text-white transition-colors text-sm font-medium">Contact</a>
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm">
+                    <a href="{{ route('home') }}" class="text-gray-500 hover:text-red-400 transition-colors">[ home ]</a>
+                    <a href="{{ route('about') }}" class="text-gray-500 hover:text-red-400 transition-colors">[ about ]</a>
+                    <a href="{{ route('projects.index') }}" class="text-gray-500 hover:text-red-400 transition-colors">[ projects ]</a>
+                    <a href="{{ route('contact') }}" class="text-gray-500 hover:text-red-400 transition-colors">[ contact ]</a>
                 </div>
 
                 <!-- Copyright -->
-                <div class="border-t border-gray-700 pt-6 w-full">
-                    <p class="text-center text-sm text-gray-400">
-                        &copy; {{ date('Y') }} Kartik Mathur. Built with Laravel & Tailwind CSS.
+                <div class="border-t border-gray-800 pt-6 w-full">
+                    <p class="text-center text-sm text-gray-600">
+                        &copy; {{ date('Y') }} Kartik Mathur. Built with Laravel & Tailwind CSS.<span class="terminal-cursor text-red-600">_</span>
                     </p>
                 </div>
             </div>
